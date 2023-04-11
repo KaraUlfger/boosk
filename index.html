@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
+    <link rel="stylesheet" href="assets/bulma/public/vendors/bulma/css/bulma.css"> 
+    <link rel="stylesheet" href="assets/bulma/public/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Boosk</title>
 </head>
+<header>
+    <h1 class="Title">Boosk</h1>
+            <p class="subtitle">Discover Your Next Adventure
+            </p>
+</header>
 <body>
    
     <section class="section">
         <div class="container">
-            <h1 class="Title">Boosk</h1>
-            <p class="subtitle">Discover Your Next Adventure
-            </p>
+            
         </div>
     </section>
 <!--Navigation Menu to left side of screen-->
@@ -22,14 +27,20 @@
             <h2>Generate a New Book</h2>
         </div>
         <div class="field">
-            <label class="label">Include in Search</label>
+            <label class="label">Add Keywords of the World You Want to Visit</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Adventure Details">
+                <input class="input" placeholder="e.g. 'fantasy, Stephen King, etc'">
             </div>
-        <button id="genNow">Generate</button>
- <!--Generation Results-->
-           
-  
-</section>
+        <button class="button" id="genNow">Generate Adventure!</button>
+        <div id="bookDetails">
+            <p id="bookTitle"></p>
+            <p id="bookDescription"></p>
+            <p id="bookPhoto"></p>
+            <p id="authorName"></p>
+        </div>
+            <script src="./assets/script/script.js"></script> 
+
+        
+   <script href="./assets/script/script.js"></script>
 </body>
 </html>
