@@ -19,20 +19,29 @@
 
 header {
     background-color: var(--headerbg);
-    color: var(--SubText)
+    color: var(--SubText);
+    text-align: center;
 }
 
 header h1 {
     color: var(--HeadText);
+    font-size: 78px;
+    text-align: center;
 }
+
 
 body {
 color: var(--SubText);
 }
 
+.box {
+    background-color: var(--NavBG);
+    text-align: center;
+}
 body h2 {
     background-color: var(--NavBG);
     color: var(--HeadText);
+    font-size: 40px;
 }
 
 body h3 {
