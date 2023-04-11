@@ -20,8 +20,8 @@ function getApi() {
          console.log(data)
         var books = data.items;
         for (var i = 0; i < books.length; i++) {
-          Title.textContent ="the title of the Book is: " + books[i].volumeInfo.title;
-          authorName.textContent = "This book is written by: " + books[i].volumeInfo.authors;
+          Title.textContent ="The title of the Book is: " + books[i].volumeInfo.title;
+          authorName.textContent ="This book is written by: " + books[i].volumeInfo.authors;
           bookDescription.textContent ="About the Book: " + books[i].volumeInfo.description;
           // have to make this url into a image and display
           bookPhoto.textContent ="Book image is: " + books[i].volumeInfo.imageLinks.thumbnail;

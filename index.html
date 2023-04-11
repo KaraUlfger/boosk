@@ -24,20 +24,35 @@
 <!--Navigation Menu to left side of screen-->
     <section class="main">
         <div class="subTitle">
-            <h2>Generate a New Book</h2>
+            <div class="box">
+                <h2>Generate a New Book</h2>
+            </div>
         </div>
-        <div class="field">
+        <div id="bookDetails" class="columns">
+            <div class="column is-half">
+                <p id="bookTitle"></p>
+            </div>
+            <div class="column is-half">
+                <p id="bookDescription"></p>
+            </div>
+            <div class="column is-half"></div>
+                <p id="bookPhoto"></p>
+            </div>
+            <div class="column is-half">
+                <p id="authorName"></p>
+            </div>
+            <div class="columns is-center">
+            <div class="column">
+            <div class="field">
             <label class="label">Add Keywords of the World You Want to Visit</label>
             <div class="control">
                 <input class="input" placeholder="e.g. 'fantasy, Stephen King, etc'">
             </div>
-        <button class="button" id="genNow">Generate Adventure!</button>
-        <div id="bookDetails">
-            <p id="bookTitle"></p>
-            <p id="bookDescription"></p>
-            <p id="bookPhoto"></p>
-            <p id="authorName"></p>
+            <button class="button" id="genNow">Generate Adventure!</button>
+            </div>
+            </div>
         </div>
+
             <script src="./assets/script/script.js"></script> 
 
         
