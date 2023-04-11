@@ -1,4 +1,4 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import "../bulma/public/vendors/bulma/bulma.sass";
 
 :root {
     --background: #fbfbf8;
@@ -11,4 +11,36 @@
     --Button: #e48bae;
     --Btext: #e45b67;
     --extra: #7c4dff;
+}
+* {
+   background-color: var(--background); 
+
+}
+
+header {
+    background-color: var(--headerbg);
+    color: var(--SubText)
+}
+
+header h1 {
+    color: var(--HeadText);
+}
+
+body {
+color: var(--SubText);
+}
+
+body h2 {
+    background-color: var(--NavBG);
+    color: var(--HeadText);
+}
+
+body h3 {
+    background-color: var(--NavBG);
+    color: var(--SubText);
+}
+
+#genNow {
+    background-color: var(--Button);
+    color: var(--Btext);
 }
