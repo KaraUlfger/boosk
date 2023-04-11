@@ -12,3 +12,35 @@
     --Btext: #e45b67;
     --extra: #7c4dff;
 }
+* {
+   background-color: var(--background); 
+
+}
+
+header {
+    background-color: var(--headerbg);
+    color: var(--SubText)
+}
+
+header h1 {
+    color: var(--HeadText);
+}
+
+body {
+color: var(--SubText);
+}
+
+body h2 {
+    background-color: var(--NavBG);
+    color: var(--HeadText);
+}
+
+body h3 {
+    background-color: var(--NavBG);
+    color: var(--SubText);
+}
+
+#genNow {
+    background-color: var(--Button);
+    color: var(--Btext);
+}
