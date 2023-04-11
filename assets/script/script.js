@@ -1,44 +1,34 @@
-// API for Quotes,will use it later
-//var requestUrl = 'https://type.fit/api/quotes';
-// APIkey for BOOK API
+var bookDescription = document.querySelector("#bookDescription");
+var bookPhoto = document.querySelector("#bookPhoto");
+var authorName = document.querySelector("#authorName");
+var Title = document.querySelector("#bookTitle");
 var apiKey = "AIzaSyARQ1qCRDIdDsr2uR4uXZZnybC2lbkOA8w";
-// URL with search key as an input
-//var requestUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&key=' + apiKey;
-
 function getApi() {
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&key=' + apiKey;
+       var input = document.querySelector(".input");
+       console.log(input.value);
+       // collects the data from the user
+       var data = input.value; 
+
+      //fetch request gets a list of all the repos for the node.js organization
+   var requestUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + data + '&key=' + apiKey;
   
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
-      })
-      .then(function (data) {
-        console.log(data)
+     })
+     .then(function (data) {
+         console.log(data)
         var books = data.items;
-        //var tableHeader = document.createElement('th');
-        //tableHeader.textContent = "Title";
-  
-        //tableBody.appendChild(tableHeader);
-  
-        //Loop over the data to generate a table, each table row will have a link to the repo url
         for (var i = 0; i < books.length; i++) {
-          var bookTitle = books[i].volumeInfo.authors;
-          console.log(books[i].volumeInfo.title);
-          // Creating elements, tablerow, tabledata, and anchor
-          //var tableRow = document.createElement('tr');
-          //var tableData = document.createElement('td');
-          //var pTag = document.createElement('p');
-  
-          //pTag.textContent = bookTitle;
-  
-          // // Appending the link to the tabledata and then appending the tabledata to the tablerow
-          // // The tablerow then gets appended to the tablebody
-        //   tableData.appendChild(pTag);
-        //   tableRow.appendChild(tableData);
-        //   tableBody.appendChild(tableRow);
-        }
-  
-        
-      });
+          Title.textContent ="the title of the Book is: " + books[i].volumeInfo.title;
+          authorName.textContent = "This book is written by: " + books[i].volumeInfo.authors;
+          bookDescription.textContent ="About the Book: " + books[i].volumeInfo.description;
+          // have to make this url into a image and display
+          bookPhoto.textContent ="Book image is: " + books[i].volumeInfo.imageLinks.thumbnail;
+          }
+  });
   }
+  
+  genNow.addEventListener('click', getApi);
+  
+  
