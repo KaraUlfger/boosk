@@ -18,9 +18,13 @@
 }
 
 header {
+
     background-color: #ececf0;
     color: #b094c2;
     padding: 20px;
+    background-color: var(--headerbg);
+    color: var(--SubText);
+    text-align: center;
 
 }
 
@@ -33,7 +37,11 @@ header h1 {
     color: #b094c2;
     font-size: 40px;
     font-style: italic;
+    font-size: 78px;
+    text-align: center;
+
 }
+
 
 body {
     color: var(--SubText);
@@ -41,9 +49,14 @@ body {
     height: 100vh;
 }
 
+.box {
+    background-color: var(--NavBG);
+    text-align: center;
+}
 body h2 {
     background-color: var(--NavBG);
     color: var(--HeadText);
+    font-size: 40px;
 }
 
 body h3 {
