@@ -70,9 +70,21 @@ body h3 {
     font-size: 35px;
 }
 
-#genNow {
+.button {
     background-color: var(--Button);
     color: var(--Btext);
     font-weight:bolder;
-   
+}
+
+.button:hover {
+    background-color: var(--SubText);
+    color: var(--Links);
+    transition: .07s;
+}
+
+.button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #b094c2;
+    transition: 0.7s;
 }
