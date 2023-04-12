@@ -3,8 +3,19 @@ var bookPhoto = document.querySelector("#bookPhoto");
 var authorName = document.querySelector("#authorName");
 var Title = document.querySelector("#bookTitle");
 var img = document.querySelector("#img");
+var adviceBtn = document.querySelector("#advice");
+var adviceText = document.querySelector("#adviceText")
 var apiKey = "AIzaSyARQ1qCRDIdDsr2uR4uXZZnybC2lbkOA8w";
+//initial value of the array of books and advice is 0, displays a new quotes and books on each click
+var idx = 0;
+Title.textContent =" ";
+authorName.textContent =" ";
+bookDescription.textContent =" ";
+bookPhoto.textContent =" ";
+img.src = " ";   
 function getApi() {
+        //increasing the array value by +1 on each click
+        idx ++;
        var input = document.querySelector(".input");
        // collects the data from the user
        var data = input.value; 
@@ -17,15 +28,38 @@ function getApi() {
         return response.json();
      })
      .then(function (data) {
-        var book = data.items[0];
+        var book = data.items[idx]; // fetches the data from the array based on index
         Title.textContent ="The title of the Book is: " + book.volumeInfo.title;
           authorName.textContent ="This book is written by: " + book.volumeInfo.authors;
           bookDescription.textContent ="About the Book: " + book.volumeInfo.description;
           // have to make this url into a image and display
           bookPhoto.textContent ="Book image is: " + book.volumeInfo.imageLinks.thumbnail;
           img.src = book.volumeInfo.imageLinks.thumbnail;   
-  });
+     });
   }
+
   
   genNow.addEventListener('click', getApi);
   
+  
+var adviceDisplayauthor = document.createElement('p');
+var adviceDisplayContent = document.createElement('h2');
+adviceDisplayauthor.textContent = " ";
+adviceDisplayContent.textContent = " ";
+
+function getAdvice(){
+   idx++;   
+   var adviceUrl = "https://type.fit/api/quotes"
+   fetch(adviceUrl)
+   .then(function(response) {
+    return response.json();
+     })
+  .then(function(data) {
+    console.log(data);
+    adviceDisplayauthor.textContent = data[idx++].author;
+    adviceDisplayContent.textContent = data[idx++].text;
+    adviceText.append(adviceDisplayauthor);
+    adviceText.append(adviceDisplayContent)
+    });
+ }
+ adviceBtn.addEventListener('click', getAdvice);// calls the function to display quotes
