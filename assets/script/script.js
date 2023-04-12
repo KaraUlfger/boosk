@@ -3,7 +3,6 @@ var bookPhoto = document.querySelector("#bookPhoto");
 var authorName = document.querySelector("#authorName");
 var Title = document.querySelector("#bookTitle");
 var img = document.querySelector("#img");
-var advice = document.querySelector('#advice')
 var apiKey = "AIzaSyARQ1qCRDIdDsr2uR4uXZZnybC2lbkOA8w";
 function getApi() {
        var input = document.querySelector(".input");
@@ -24,7 +23,6 @@ function getApi() {
           bookDescription.textContent ="About the Book: " + book.volumeInfo.description;
           // have to make this url into a image and display
           bookPhoto.textContent ="Book image is: " + book.volumeInfo.imageLinks.thumbnail;
-          console.log(book.volumeInfo.imageLinks.thumbnail);
           img.src = book.volumeInfo.imageLinks.thumbnail;   
   });
   }
