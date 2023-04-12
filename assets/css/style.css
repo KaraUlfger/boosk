@@ -1,0 +1,90 @@
+@import "../bulma/public/vendors/bulma/bulma.sass";
+
+:root {
+    --background: #fbfbf8;
+    --headerbg: #ececf0;
+    --NavBG: #d9d9e1;
+    --Textf: #ebe4e2;
+    --HeadText: #c396b7;
+    --SubText: #b094c2;
+    --Links: #e29b9a;
+    --Button: #e48bae;
+    --Btext: #e45b67;
+    --extra: #7c4dff;
+}
+* {
+   background-color: var(--fbfbf8); 
+
+}
+
+header {
+
+    background-color: #ececf0;
+    color: #b094c2;
+    padding: 20px;
+    background-color: var(--headerbg);
+    color: var(--SubText);
+    text-align: center;
+
+}
+
+header h1 {
+    color: var(--HeadText);
+    font-size: 90px;
+}
+
+.subtitle {
+    color: #b094c2;
+    font-size: 40px;
+    font-style: italic;
+    font-size: 78px;
+    text-align: center;
+
+}
+
+
+body {
+    color: var(--SubText);
+    background-color: var(--background);
+    height: 100vh;
+}
+
+.box {
+    background-color: var(--NavBG);
+    text-align: center;
+}
+body h2 {
+    background-color: var(--NavBG);
+    color: var(--HeadText);
+    font-size: 40px;
+}
+
+body h3 {
+    background-color: var(--NavBG);
+    color: var(--SubText);
+}
+
+.box {
+    background-color: var(--NavBG);
+    height: 100px;
+    font-size: 35px;
+}
+
+.button {
+    background-color: var(--Button);
+    color: var(--Btext);
+    font-weight:bolder;
+}
+
+.button:hover {
+    background-color: var(--SubText);
+    color: var(--Links);
+    transition: .07s;
+}
+
+.button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #b094c2;
+    transition: 0.7s;
+}
