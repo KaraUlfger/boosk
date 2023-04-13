@@ -48,9 +48,13 @@ body {
     background-color: var(--background);
     height: 100vh;
 }
-
+ 
 nav {
   text-align: start;
+}
+
+.main {
+    background-color: var(--background);
 }
 
 .box {
@@ -98,3 +102,9 @@ body h3 {
   height: 50vh;
   font-size: 35px;
 }
+
+#modal-staff .box{
+    background-color: var(--NavBG);
+    height: 75vh;
+    font-size: 35px;
+  }

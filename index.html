@@ -29,7 +29,7 @@
         <nav class="menu">
                 <ul class="menu-list">
                   <li>
-                    <a href="">
+                    <a href="featured.html">
                       <span class="icon">
                         <i class="fa fa-exclamation-circle"></i>
                       </span>
@@ -37,7 +37,7 @@
                       </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="index.html">
                       <span class="icon">
                         <i class="fa fa-book"></i>
                       </span>
@@ -45,15 +45,16 @@
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="picks.html">
+                    <button class="staff-modal-trigger" data-target="modal-staff">
                       <span class="icon">
                         <i class="fa fa-address-book"></i>
                       </span>
                       Staff Picks
-                      </a>
+                    </button>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="list.html">
                       <span class="icon">
                         <i class="fa fa-file-text-o"></i>
                       </span>
@@ -75,7 +76,7 @@
               <div class="column is-one-third">
                 <p id="bookTitle"></p>
                 <img id="img"/>
-                <p id="authorName"></p>
+               <p id="authorName"></p>
             </div>
             <div class="column is-one-third">
                 <p id="bookDescription"></p>
@@ -95,27 +96,45 @@
                 </div><br>
             
                     <button class="button is-outlined is-rounded is-hovered" id="genNow" m-4>Generate Adventure!</button>
+<<<<<<< HEAD
                     <button class="button is-outlined is-rounded is-hovered" id="saveBookButton" m-4> Save Book!</button>
                     <button class="button is-outlined is-rounded is-hovered" id="saveBookButton" onclick="window.location.href='list.html'" m-4>list</button>
                     <div id="dislayBooks"></div>
                     <button class="button is-outlined is-rounded is-hovered" id="staffPickBtn">staff Picks</button>
+=======
+>>>>>>> 2081ef761b9f6be340e11b81114849bd4ed4507e
             </div>
             <div class="column"></div>
         </div>
-        <!-- generating the Quotes-->
+        <!-- modals-->
+          <!--quote modal-->
         <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
               <div class="box">
-                <button class="button is-outlined is-rounded is-hovered" id="advice">Click Me</button>
+                <button class="button is-outlined is-rounded is-hovered" id="advice">...to get Lost</button>
                 <div id ="adviceText"></div>
               </div>
             </div>
-          
+    
             <button class="modal-close is-large" aria-label="close"></button>
           </div>
+            <!--Staff Pick Modal-->
+          <div id="modal-staff" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <div class="box">
+                <div id="dislayBooks"></div>
+                    <button class="button is-outlined is-rounded is-hovered" id="staffPickBtn">Click Me</button>
+              </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+<<<<<<< HEAD
           <div id="savedList"></div>
        
+=======
+>>>>>>> 2081ef761b9f6be340e11b81114849bd4ed4507e
     </section>
   <script src="./assets/script/script.js"></script> 
 
