@@ -45,7 +45,7 @@ Links to the deployed application and the GitHub repository.
 https://karaulfger.github.io/boosk/
 
 ## Screenshots of Application 
-![Screenshot of App](../assets/images/bossk.png1)
+![Screenshot of App](../assets/images/boosk.png)
 
 ## Credits
 Karathesymbiote, Rev Ghoul, Yamini, Ryan, UW Coding Bootcamp, and all the wonderful help from Bootcamp Staff and Students
