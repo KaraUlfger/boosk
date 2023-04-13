@@ -26,8 +26,7 @@
             </div>
         </div>
         <div id="bookDetails" class="columns">
-
-            <nav class="menu">
+        <nav class="menu">
                 <ul class="menu-list">
                   <li>
                     <a href="featured.html">
@@ -47,11 +46,12 @@
                   </li>
                   <li>
                     <a href="picks.html">
+                    <button class="staff-modal-trigger" data-target="modal-staff">
                       <span class="icon">
                         <i class="fa fa-address-book"></i>
                       </span>
                       Staff Picks
-                    </a>
+                    </button>
                   </li>
                   <li>
                     <a href="list.html">
@@ -71,7 +71,9 @@
                   </li>
                 </ul>
               </nav>
-            <div class="column is-one-third">
+            
+              <div id="allBooks"></div>
+              <div class="column is-one-third">
                 <p id="bookTitle"></p>
                 <img id="img"/>
                <p id="authorName"></p>
@@ -84,11 +86,10 @@
             </div>
             <div class="column is-half">
             </div>
-
             <div class="columns is-center">
                 <div class="column is-one-third"></div>
                 <div class="column is-one-third">
-                    <div class="field">
+                <div class="field">
                     <label class="label">Add Keywords of the World You Want to Visit</label>
                     <div class="control">
                     <input class="input" placeholder="e.g. 'fantasy, Stephen King, etc'">
@@ -98,7 +99,8 @@
             </div>
             <div class="column"></div>
         </div>
-        <!-- generating the Quotes-->
+        <!-- modals-->
+          <!--quote modal-->
         <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
@@ -107,10 +109,20 @@
                 <div id ="adviceText"></div>
               </div>
             </div>
-          
+    
             <button class="modal-close is-large" aria-label="close"></button>
           </div>
-       
+            <!--Staff Pick Modal-->
+          <div id="modal-staff" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <div class="box">
+                <div id="dislayBooks"></div>
+                    <button class="button is-outlined is-rounded is-hovered" id="staffPickBtn">Click Me</button>
+              </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+          </div>
     </section>
   <script src="./assets/script/script.js"></script> 
 
