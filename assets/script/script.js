@@ -30,7 +30,7 @@ function getApi() {
      .then(function (data) {
         var book = data.items[idx]; // fetches the data from the array based on index
         Title.textContent ="The title of the Book is: " + book.volumeInfo.title;
-          authorName.textContent ="This book is written by: " + book.volumeInfo.authors;
+          authorName.textContent = book.volumeInfo.authors;
           bookDescription.textContent ="About the Book: " + book.volumeInfo.description;
           // have to make this url into a image and display
           bookPhoto.textContent ="Book image is: " + book.volumeInfo.imageLinks.thumbnail;
