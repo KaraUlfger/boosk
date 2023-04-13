@@ -48,9 +48,13 @@ body {
     background-color: var(--background);
     height: 100vh;
 }
-
+ 
 nav {
   text-align: start;
+}
+
+.main {
+    background-color: var(--background);
 }
 
 .box {
