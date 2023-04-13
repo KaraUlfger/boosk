@@ -1,3 +1,4 @@
+
 var bookDescription = document.querySelector("#bookDescription");
 var bookPhoto = document.querySelector("#bookPhoto");
 var authorName = document.querySelector("#authorName");
@@ -5,8 +6,19 @@ var Title = document.querySelector("#bookTitle");
 var img = document.querySelector("#img");
 var adviceBtn = document.querySelector("#advice");
 var staffPickBtn = document.querySelector("#staffPickBtn")
+var savedList = document.querySelector("#savedList")
 var apiKey = "AIzaSyARQ1qCRDIdDsr2uR4uXZZnybC2lbkOA8w";
 var volumeIds = [" ","SIDbnAAACAAJ", "PEpoEAAAQBAJ", "o1vmzQEACAAJ", "jsxaDwAAQBAJ","qRMqB2BSJr4C "];
+
+var saveBookButton = document.querySelector("#saveBookButton")
+var bookListButton = "fa fa-file-text-o"
+var savedBook = JSON.parse(localStorage.getItem("savedBook"))
+
+
+
+
+console.log('Saved Books:' ,    savedBook)
+
 //initial value of the array of books and advice is 0, displays a new quotes and books on each click
 var idx = 0;
 Title.textContent =" ";
@@ -41,7 +53,23 @@ function getApi() {
           bookDescription.textContent ="About the Book: " + book.volumeInfo.description;
           bookPhoto.textContent ="Book image is: " + book.volumeInfo.imageLinks.thumbnail;
           img.src = book.volumeInfo.imageLinks.thumbnail;   
-     });
+        })
+
+        
+        .then(function (saveBook){
+          var bookDetails = [Title.textContent, authorName.textContent, bookDescription.textContent, bookPhoto.textContent, img.src]
+          
+          var allBooks = JSON.parse(localStorage.getItem("username")) || []
+
+        console.log(bookDetails)
+
+        saveBookButton.addEventListener("click", function(){
+          allBooks.push(bookDetails)
+          localStorage.setItem('savedBook', JSON.stringify(allBooks))
+          console.log('Your Book has Been Saved!' , bookDetails)
+          
+        })
+        })
   }
 genNow.addEventListener('click', getApi);
 
@@ -150,6 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
    });
  });
 
+<<<<<<< HEAD
+
+
+
+=======
  document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -188,3 +221,4 @@ if (e.keyCode === 27) { // Escape key
     }
   });
 });
+>>>>>>> 2081ef761b9f6be340e11b81114849bd4ed4507e
