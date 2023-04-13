@@ -49,6 +49,10 @@ body {
     height: 100vh;
 }
 
+nav {
+  text-align: start;
+}
+
 .box {
     background-color: var(--NavBG);
     text-align: center;
@@ -88,3 +92,15 @@ body h3 {
     box-shadow: 0 0 0 4px #b094c2;
     transition: 0.7s;
 }
+
+.modal .box{
+  background-color: var(--NavBG);
+  height: 50vh;
+  font-size: 35px;
+}
+
+#modal-staff .box{
+    background-color: var(--NavBG);
+    height: 75vh;
+    font-size: 35px;
+  }
