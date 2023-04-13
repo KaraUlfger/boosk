@@ -26,8 +26,7 @@
             </div>
         </div>
         <div id="bookDetails" class="columns">
-
-            <nav class="menu">
+        <nav class="menu">
                 <ul class="menu-list">
                   <li>
                     <a href="">
@@ -51,7 +50,7 @@
                         <i class="fa fa-address-book"></i>
                       </span>
                       Staff Picks
-                    </a>
+                      </a>
                   </li>
                   <li>
                     <a href="">
@@ -71,7 +70,9 @@
                   </li>
                 </ul>
               </nav>
-            <div class="column is-one-third">
+            
+              <div id="allBooks"></div>
+              <div class="column is-one-third">
                 <p id="bookTitle"></p>
                 <img id="img"/>
                 <p id="authorName"></p>
@@ -84,17 +85,18 @@
             </div>
             <div class="column is-half">
             </div>
-
             <div class="columns is-center">
                 <div class="column is-one-third"></div>
                 <div class="column is-one-third">
-                    <div class="field">
+                <div class="field">
                     <label class="label">Add Keywords of the World You Want to Visit</label>
                     <div class="control">
                     <input class="input" placeholder="e.g. 'fantasy, Stephen King, etc'">
                 </div><br>
             
                     <button class="button is-outlined is-rounded is-hovered" id="genNow" m-4>Generate Adventure!</button>
+                    <div id="dislayBooks"></div>
+                    <button class="button is-outlined is-rounded is-hovered" id="staffPickBtn">staff Picks</button>
             </div>
             <div class="column"></div>
         </div>
