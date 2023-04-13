@@ -98,3 +98,9 @@ body h3 {
   height: 50vh;
   font-size: 35px;
 }
+
+#modal-staff .box{
+    background-color: var(--NavBG);
+    height: 75vh;
+    font-size: 35px;
+  }
