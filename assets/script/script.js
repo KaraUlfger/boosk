@@ -100,42 +100,47 @@ function getAdvice(){
  //generating the staffPicks
  
  function staffPicks(){
-// increases the array index by one on each click
-   
-   var staffUrl = 'https://www.googleapis.com/books/v1/volumes/' + volumeIds[idx++] + '?key=' + apiKey;
+  // increases the array index by one on each click
+  var staffUrl = 'https://www.googleapis.com/books/v1/volumes/' + volumeIds[idx++] + '?key=' + apiKey;
 
-    fetch(staffUrl)
-      .then(function (response) {
-        return response.json();
-     })
-     .then(function (data) {
-      console.log(data);
-        var book = data; 
-        // craeted a div to display the staff picks
-        var staffPick = document.createElement("div");
-        // storing the value of title
-        var staffTitle = document.createElement("p");
-        staffTitle.textContent = book.volumeInfo.title;
-        // creating the img tag
-        var staffPickThumbnail = document.createElement("img");
-        //when the book has a img to display it display the plceholder
-         if (book.volumeInfo.imageLinks === undefined) {
-            staffPickThumbnail.src =  "https://place-hold.it/128x192";
-        } else {
-           staffPickThumbnail.src =  book.volumeInfo.imageLinks.thumbnail;
-        }
-         var authorNames = document.createElement('p');
-         authorNames.textContent = book.volumeInfo.authors;
-          //dynamically created tags are appended into the main dev class 
-         staffPick.append(staffTitle);
-         staffPick.append(staffPickThumbnail);
-         staffPick.append(authorNames);
-         var displayBooksDiv = document.getElementById("dislayBooks");
-         displayBooksDiv.append(staffPick)
-       });
-   }
+  fetch(staffUrl)
+    .then(function (response) {
+      return response.json();
+   })
+   .then(function (data) {
+    console.log(data);
+      var book = data; 
+      // craeted a div to display the staff picks
+      var staffPick = document.createElement("div");
+      // storing the value of title
+      var staffTitle = document.createElement("p");
+      staffTitle.textContent = book.volumeInfo.title;
+      // creating the img tag
+      var staffPickThumbnail = document.createElement("img");
+      //when the book has a img to display it display the plceholder
+      if (book.volumeInfo.imageLinks === undefined) {
+        staffPickThumbnail.src =  "https://place-hold.it/128x192";
+      } else {
+         staffPickThumbnail.src =  book.volumeInfo.imageLinks.thumbnail;
+      }
+      var authorNames = document.createElement('p');
+      authorNames.textContent = book.volumeInfo.authors;
+      //dynamically created tags are appended into the main dev class 
+      staffPick.append(staffTitle);
+      staffPick.append(staffPickThumbnail);
+      staffPick.append(authorNames);
+      var displayBooksDiv = document.getElementById("dislayBooks");
+      // remove previous book's content from the displayBooksDiv
+      while (displayBooksDiv.firstChild) {
+        displayBooksDiv.removeChild(displayBooksDiv.firstChild);
+      }
+      // add new book's content to the displayBooksDiv
+      displayBooksDiv.append(staffPick);
+    });
+}
 
-staffPickBtn.addEventListener('click',staffPicks);
+staffPickBtn.addEventListener('click', staffPicks);
+
 
 // creating the modal
 
@@ -178,47 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
    });
  });
 
-<<<<<<< HEAD
 
 
 
-=======
- document.addEventListener('DOMContentLoaded', () => {
-  // Functions to open and close a modal
-  function openModal($el) {
-    $el.classList.add('is-active');
-  }
-  function closeModal($el) {
-    $el.classList.remove('is-active');
-  }
-  function closeAllModals() {
-    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-      closeModal($modal);
-    });
-  }
-// Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.staff-modal-trigger') || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
-    const $target = document.getElementById(modal);
-    $trigger.addEventListener('click', () => {
-      openModal($target);
-    });
-  });
-
-  
-// Add a click event on various child elements to close the parent modal
-  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-    const $target = $close.closest('.modal');
-    $close.addEventListener('click', () => {
-      closeModal($target);
-    });
-  });
-// Add a keyboard event to close all modals
-  document.addEventListener('keydown', (event) => {
-    const e = event || window.event;
-if (e.keyCode === 27) { // Escape key
-      closeAllModals();
-    }
-  });
-});
->>>>>>> 2081ef761b9f6be340e11b81114849bd4ed4507e
