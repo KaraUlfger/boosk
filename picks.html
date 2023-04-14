@@ -69,10 +69,68 @@
                   </li>
                 </ul>
               </nav>
-         <div class="column is-one-third">
-            <p>New Content Coming Soon!</p>
+
+              <div class="column is-one-third">
+                <div id="dislayBooks"></div>
+            </div>
+              <div class="column is-one-third">
+                <button class="button is-outlined is-rounded is-hovered" id="staffPickBtn">Why not?</button>
+          </div>
+              </div>
+                <div class="column is-one-third"></div>
+                        <div id="allBooks"></div>
+              <div class="column is-one-third">
+                <p id="bookTitle"></p>
+                <img id="img"/>
+               <p id="authorName"></p>
+            </div>
+            <div class="column is-one-third">
+                <p id="bookDescription"></p>
+            </div>
+            <div class="column is-half"></div>
+                <p id="bookPhoto"></p>
+            </div>
+            <div class="column is-half">
+            </div>
+            <div class="columns is-center">
+              
+                <div class="field">
+                    <label class="label is-hidden">Add Keywords of the World You Want to Visit</label>
+                    <div class="control">
+                    <input class="input is-hidden" placeholder="e.g. 'fantasy, Stephen King, etc'">
+                </div><br>
             
+                    <button class="button is-outlined is-rounded is-hovered is-hidden" id="genNow" m-4>Generate Adventure!</button>
+                    <button class="button is-outlined is-rounded is-hovered is-hidden" id="saveBookButton" m-4> Save Book!</button>
+                    <button class="button is-outlined is-rounded is-hovered is-hidden" id="saveBookButton" onclick="window.location.href='list.html'" m-4>list</button>
+                    <div id="dislayBooks"></div>
+                    <button class="button is-outlined is-rounded is-hovered is-hidden" id="staffPickBtn">staff Picks</button>
+            
+            <div class="column"></div>  
         </div>
+        <div id="modal-js-example" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <div class="box">
+              <button class="button is-outlined is-rounded is-hovered" id="advice">...to get Lost</button>
+              <div id ="adviceText"></div>
+            </div>
+          </div>
+  
+          <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+          <!--Staff Pick Modal-->
+        <div id="modal-staff" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <div class="box">
+              <div id="dislayBooks"></div>
+                  <button class="button is-outlined is-rounded is-hovered" id="staffPickBtn">Click Me</button>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+        <div id="savedList"></div>
         <script src="./assets/script/script.js"></script> 
 </body>
 
