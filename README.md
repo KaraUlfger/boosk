@@ -43,6 +43,7 @@ Links to the deployed application and the GitHub repository.
 
 ## Link to Application
 https://karaulfger.github.io/boosk/
+https://github.com/KaraUlfger/boosk/tree/main
 
 ## Screenshots of Application 
 ![Screenshot of App](/assets/images/boosk.png)
